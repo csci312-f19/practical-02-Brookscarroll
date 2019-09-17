@@ -61,7 +61,7 @@ whenever the value of the color changes.
 */
 const createColorPicker = function createColorPicker(initialValue, callback) { // eslint-disable-line no-unused-vars, max-len
   // create a div to hold the picker
-
+  
 
   // create a div with the class 'color-swatch' to provide the colored rectangle
   // and add it to the picker
