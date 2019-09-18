@@ -61,13 +61,13 @@ whenever the value of the color changes.
 */
 const createColorPicker = function createColorPicker(initialValue, callback) { // eslint-disable-line no-unused-vars, max-len
   // create a div to hold the picker
-  const picker = document.createElement("div");
-  picker.className = "color-picker";
+  const picker = document.createElement('div');
+  picker.className = 'color-picker';
 
   // create a div with the class 'color-swatch' to provide the colored rectangle
   // and add it to the picker
-  const colorBox = document.createElement("div");
-  colorBox.className = "color-swatch";
+  const colorBox = document.createElement('div');
+  colorBox.className = 'color-swatch';
   picker.appendChild(colorBox);
 
 
@@ -88,9 +88,9 @@ const createColorPicker = function createColorPicker(initialValue, callback) { /
   };
 
   // add sliders for each color channel
-  Object.keys(currentColor).forEach((color) =>{
+  Object.keys(currentColor).forEach((color) => {
     // initialize slider in here
-    let slider = createSlider(color, currentColor[color], update);
+    const slider = createSlider(color, currentColor[color], update);
     picker.appendChild(slider);
   });
 
