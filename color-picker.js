@@ -18,7 +18,7 @@ const createSlider = function createSlider(color, initialValue, callback) {
 
   // create a div to hold the color name and add it to the slider
   const label = document.createElement('div');
-  label.className = `color-label`;
+  label.className = 'color-label';
   label.innerHTML = `${color}:`;
   slider.appendChild(label);
 
@@ -80,8 +80,8 @@ const createColorPicker = function createColorPicker(initialValue, callback) { /
   // - merge the change into the the current color
   // - set the background color of the swatch
   // - call the callback with the current color
-  const update = function(newColor) {
-    currentColor = { ...currentColor, ...newColor }
+  const update = function (newColor) {
+    currentColor = { ...currentColor, ...newColor };
     const { red, green, blue } = currentColor;
     colorBox.style.background = `rgb(${red}, ${green}, ${blue})`;
     callback(currentColor);
